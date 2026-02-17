@@ -1,0 +1,26 @@
+[project]
+name = "semanticnn"
+version = "0.1.0"
+description = "Transformation-centric verification toolkit for semantic invariance under neural model transformations"
+readme = "README.md"
+authors = [{ name = "SemanticNN Contributors", email = "devnull@example.com" }]
+requires-python = ">=3.11,<4"
+dependencies = [
+  "numpy>=2.2.0,<3.0.0",
+  "onnx>=1.17.0,<2.0.0",
+  "click>=8.1.8,<9.0.0",
+  "pydantic>=2.10.6,<3.0.0",
+]
+
+[project.scripts]
+semanticnn = "semanticnn.cli:main"
+
+[tool.poetry]
+packages = [{ include = "semanticnn" }]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
